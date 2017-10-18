@@ -4,11 +4,13 @@
 def key_for_min_value(name_hash)
   name_hash.collect do |name, age|
     if age[0] < age[1] && age[0] < age[2]
-      return name[0]
+      name[0]
     elsif age[1] < age[0] && age[1] < age[2]
-      return name[1]
+      name[1]
     elsif age[2] < age[0] && age[2] < age[1]
-      return name[2]
+      name[2]
+    else
+      nil
     end
   end
 end
